@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+h1,
+p {
+  font-family: Lato;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: rgb(114, 114, 115);
+  background: linear-gradient(
+    191deg,
+    rgba(114, 114, 115, 1) 0%,
+    rgba(156, 156, 156, 1) 72%,
+    rgba(186, 186, 186, 1) 100%
+  );
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  font-family: digital;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.calc-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: stretch;
+  width: 400px;
+  height: 500px;
+  background-color: black;
+}
+input {
+  width: 97%;
+  background-color: black;
+  color: #fff;
+}
+.header {
+  height: 30%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  flex-direction: column;
+  font-family: digital;
+  /* font-size: 29px; */
+}
+.header div:first-child {
+  height: 50%;
+  text-align: right;
+  padding: 10px;
+  color: orange;
+  font-size: 25px;
+}
+.header div:last-child {
+  height: 50%;
+  text-align: right;
+  padding: 10px;
   color: white;
+  font-size: 25px;
 }
-
-.App-link {
-  color: #61dafb;
+.top-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  height: 25%;
+  font-family: digital;
+  font-size: larger;
+  color: #fff;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.top-buttons button:first-child {
+  width: 50%;
+  color: #fff;
+  background-color: rgb(102, 31, 31);
+  font-size: 30px;
+}
+.top-buttons button:nth-child(2),
+.top-buttons button:nth-child(3) {
+  width: 25%;
+  color: #fff;
+  background-color: rgba(175, 167, 166, 0.685);
+  font-size: 38px;
+}
+.top-buttons button:hover {
+  /* width: calc(100% + 1%); */
+  /* transform: scale(1.03); */
+  transform: scale(1.03);
+  cursor: pointer;
+}
+.other-buttons {
+  display: flex;
+  height: 100%;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.right-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  height: 100%;
+  width: 26%;
+}
+.main-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  flex-wrap: wrap;
+  width: 80%;
+}
+.main-buttons button {
+  width: 33.33%;
+  color: #fff;
+  background-color: rgb(87, 86, 85);
+  font-size: 38px;
+}
+.main-buttons button:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+.main-buttons button:nth-child(10) {
+  width: 66.66%;
+}
+.right-buttons button:first-child {
+  height: 25%;
+  color: #fff;
+  background-color: rgba(175, 167, 166, 0.685);
+  font-size: 56px;
+}
+.right-buttons button:nth-child(2) {
+  height: 25%;
+  color: #fff;
+  background-color: rgba(175, 167, 166, 0.685);
+  font-size: 40px;
+}
+.right-buttons button:last-child {
+  height: 50%;
+  color: #fff;
+  /* font-size: x-large; */
+  background-color: rgb(12, 30, 109);
+  font-size: 40px;
+}
+.right-buttons button:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+@media (min-width: 300px) and (max-width: 500px) {
+  .main-div {
+    height: 100vh;
+    /* width: 100vw; */
+    font-size: xxx-large;
   }
-  to {
-    transform: rotate(360deg);
+  .header {
+    font-size: 36px;
+  }
+  .calc-wrapper {
+    width: 90%;
+    height: 81%;
   }
 }
